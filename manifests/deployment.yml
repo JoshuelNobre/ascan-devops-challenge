@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: joshuelnobreascandevopschallenge 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: joshuelnobreascandevopschallenge
+  template:
+    metadata:
+      labels:
+        app: joshuelnobreascandevopschallenge 
+    spec:
+      containers:
+        - name: joshuelnobreascandevopschallenge 
+          image: totestandoacr.azurecr.io/joshuelnobreascandevopschallenge
+          ports:
+          - containerPort: 80
